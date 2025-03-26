@@ -12,14 +12,14 @@ packages = [
 python = ">=3.8"
 pygame = "^2.0.1"
 svgpathtools = "*"
+cssutils = "^2.2.0"
+scikit-image = "^0.19.3"
+numpy = "^1.20.2"
+torch = "^1.8.1"
 
 [tool.poetry.group.dev.dependencies]
-torch = "^1.8.1"
 torchvision = "^0.11.3"
-numpy = "^1.20.2"
-scikit-image = "^0.19.3"
 svgwrite = "^1.4.1"
-cssutils = "^2.2.0"
 numba = "^0.55.2"
 torch-tools = "^0.1.5"
 visdom = "^0.1.8"
