@@ -26,5 +26,5 @@ visdom = "^0.1.8"
 cmake = "^3.18.4"
 
 [build-system]
-requires = ["poetry-core>=1.0.0a5", "setuptools", "wheel", "torch"]
+requires = ["poetry-core>=1.0.0a5", "setuptools", "wheel", "torch", "numpy", "cmake"]
 build-backend = "setuptools.build_meta"
