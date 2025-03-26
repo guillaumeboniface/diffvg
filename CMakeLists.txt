@@ -20,6 +20,8 @@ if(DIFFVG_CUDA)
     set(CMAKE_CUDA_STANDARD 11)
     if(NOT WIN32)
         # Hack: for some reason the line above doesn't work on some Linux systems.
+        set(CUDA_HOST_COMPILER gcc-12)
+        set(CMAKE_CUDA_HOST_COMPILER gcc-12)
         set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -std=c++11")
         #set(CUDA_NVCC_FLAGS_DEBUG "-g -G")
     endif()
