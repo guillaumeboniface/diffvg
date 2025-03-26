@@ -89,11 +89,13 @@ if len(packages) == 0:
 if 'DIFFVG_CUDA' in os.environ:
     build_with_cuda = os.environ['DIFFVG_CUDA'] == '1'
 
-setup(name = 'diffvg',
-      version = '0.0.1',
-      install_requires = ["svgpathtools"],
-      description = 'Differentiable Vector Graphics',
-      ext_modules = [CMakeExtension('diffvg', '', build_with_cuda)],
-      cmdclass = dict(build_ext=Build, install=install),
-      packages = packages,
-      zip_safe = False)
+setup(
+    name='diffvg',
+    version='0.1.0',
+    packages=['pydiffvg', 'pydiffvg_tensorflow'],
+    install_requires=["svgpathtools"],
+    description='Differentiable Vector Graphics',
+    ext_modules=[CMakeExtension('diffvg', '', build_with_cuda)],
+    cmdclass=dict(build_ext=Build, install=install),
+    zip_safe=False
+)
